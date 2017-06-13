@@ -1,0 +1,21 @@
+<!doctype html>
+
+<head>
+    <title> Today News </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            Blockchain News
+        </h1>
+    </div>
+    <div>
+        <ul>
+            {% for item in list %}
+            <li><a href="/{{ item }}">{{ item }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>

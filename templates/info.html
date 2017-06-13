@@ -1,0 +1,30 @@
+<!doctype html>
+
+<head>
+    <title> Today News </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='info.css') }}">
+</head>
+
+<body>
+    <div class="nav">
+        <p><a href='/'>Return Home</a></p>
+    </div>
+    <div class="header">
+        <h1>{{ site }}</h1>
+    </div>
+    <div class="content">
+        <ul>
+            {% for item in list %}
+            <li>
+                <div>
+                    <p>
+                        <strong>{{ item['time'] }}</strong>
+                        <a href="{{ item['link'] }}">{{ item['title'] }}</a>
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
