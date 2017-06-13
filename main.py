@@ -3,6 +3,7 @@
 
 import parser
 import mongo
+import threading
 
 list = [
     ('https://news.bitcoin.com/feed/','newsbitcoin'),
@@ -21,4 +22,6 @@ def main():
             db.close_db()
 
 if __name__ == '__main__':
-    main()
+    while True:
+        t = threading.Timer(1200, main)
+        t.start()
