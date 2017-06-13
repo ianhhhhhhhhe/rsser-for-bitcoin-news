@@ -1,4 +1,0 @@
-[2017-06-13 13:33:53,972] [ERROR] Start Mongo Error: name 'client' is not defined
-[2017-06-13 13:35:14,320] [ERROR] Start Mongo Error: name 'client' is not defined
-[2017-06-13 13:36:30,507] [ERROR] Start Mongo Error: name 'db' is not defined
-[2017-06-13 13:37:10,872] [ERROR] Start Mongo Error: name 'db' is not defined
