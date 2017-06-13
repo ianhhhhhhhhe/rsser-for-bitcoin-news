@@ -12,10 +12,13 @@ list = [
 ]
 db = mongo.MongoPipeline()
 
-for url in list:
-    res = parser.parser(url[0],url[1])
-    print('\n\n',url,'\n', res)
-    try:
-        db.insert_db(res)
-    finally:
-        db.close_db()
+def main():
+    for url in list:
+        res = parser.parser(url[0],url[1])
+        try:
+            db.insert_db(res)
+        finally:
+            db.close_db()
+
+if __name__ == '__main__':
+    main()
