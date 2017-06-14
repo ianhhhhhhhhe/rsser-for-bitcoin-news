@@ -23,5 +23,5 @@ def main():
 
 if __name__ == '__main__':
     while True:
-        t = threading.Timer(1200, main)
+        t = threading.Timer(120, main)
         t.start()
