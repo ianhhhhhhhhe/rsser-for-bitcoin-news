@@ -22,7 +22,7 @@ class MongoPipeline(object):
         if not type(items) == type(list()):
             raise TypeError('Type of item must be list')
         for item in items:
-            it = list(self.collection.find({'title': item['title']}))
+            it = list(self.collection.find({'link': item['link']}))
             item = self.process_item(item)
             if it:
                 print('item is found')
