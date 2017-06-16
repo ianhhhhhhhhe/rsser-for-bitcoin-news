@@ -22,6 +22,4 @@ def main():
             db.close_db()
 
 if __name__ == '__main__':
-    while True:
-        main()
-        time.sleep(60)
+    main()
