@@ -12,5 +12,15 @@ def parser(url, site_name):
         page['link'] = item.link
         page['time'] = item.published
         page['site'] = site_name
+        page['tag'] = mark(item.category)
+        print(page)
         res.append(page)
     return res
+
+def mark(tag):
+    if tag in ['比特币','Bitcoin']:
+        tag = 'bitcoin'
+    if tag in ['区块链']:
+        tag = 'blockchain'
+    tag = 'digitalcoin'
+    return tag

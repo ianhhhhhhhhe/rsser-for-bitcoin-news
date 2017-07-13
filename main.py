@@ -6,10 +6,11 @@ import mongo
 import time
 
 list = [
-    ('https://news.bitcoin.com/feed/','newsbitcoin'),
-    ('http://www.coindesk.com/feed/','coindesk'),
-    ('https://bitcoinmagazine.com/feed/','bitcoinmagazine'),
+    #('https://news.bitcoin.com/feed/','newsbitcoin'),
+    #('http://www.coindesk.com/feed/','coindesk'),
+    #('https://bitcoinmagazine.com/feed/','bitcoinmagazine'),
     ('http://www.newsbtc.com/feed/','newsbtc'),
+    ('https://www.8btc.com/feed', '8btc'),
 ]
 db = mongo.MongoPipeline()
 
