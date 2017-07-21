@@ -38,5 +38,5 @@ class MongoPipeline(object):
             time.mktime(
                 time.strptime(
                     item['time'][:24], '%a, %d %b %Y %H:%M:%S')
-                    )).strftime('%Y-%m-%d-%H-%M-%S')
+                    )).strftime('%Y-%m-%d-%H')
         return item
