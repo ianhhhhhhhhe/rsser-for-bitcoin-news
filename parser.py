@@ -13,10 +13,8 @@ def parser(url, site_name):
         page['time'] = item.published
         page['site'] = site_name
         page['tag'] = mark(item.category)
-        if '8btc' in url:
-            page['lang'] = 'cn'
-        else:
-            page['lang'] = 'en'
+        page['photo'] = None
+        page['lang'] = 'cn'
         res.append(page)
     return res
 

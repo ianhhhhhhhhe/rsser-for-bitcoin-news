@@ -34,9 +34,8 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item):
-        item['time'] = datetime.datetime.fromtimestamp(
-            time.mktime(
-                time.strptime(
-                    item['time'][:24], '%a, %d %b %Y %H:%M:%S')
-                    )).strftime('%Y-%m-%d-%H')
+        item['time'] = int(time.mktime(
+            time.strptime(
+                item['time'][:24], '%a, %d %b %Y %H:%M:%S')
+        ))
         return item
